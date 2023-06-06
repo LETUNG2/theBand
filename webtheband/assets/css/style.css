@@ -24,6 +24,10 @@ html {
     margin-top: 16px !important;
 }
 
+.mt-32 {
+    margin-top: 32px !important;
+}
+
 .row::after {
     content: "";
     display: block;
@@ -359,7 +363,7 @@ html {
     width: 900px;
     min-height: 200px;
     max-width: calc(100% - 32px);
-    animation: modalFadeIn ease-in 0.6;
+    animation: modalFadeIn 0.4s;
 }
 
 header.modal-header {
@@ -438,14 +442,14 @@ header.modal-header {
 }
 
 @keyframes modalFadeIn {
-    from {
+    0% {
+        top: -300px;
         opacity: 0;
-        transform: translateY(-150px);
     }
 
-    to {
+    100% {
+        top: 0;
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
