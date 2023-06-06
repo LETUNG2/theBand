@@ -38,6 +38,13 @@
         padding: 5px 42px;
     }
 
-}
 
-@media (max-width:1023px) and (min-width:740) {}
+    #conten .member-img {
+        width: 60%;
+    }
+
+    .s-col-full {
+        width: 100%;
+    }
+
+}
