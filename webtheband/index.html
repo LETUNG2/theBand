@@ -8,6 +8,7 @@
     <title>The band</title>
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reponsive.css">
     <link rel="icon" href="./assets/image/member.jpg" type="image/x-icon" />
 </head>
 
@@ -39,6 +40,9 @@
 
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
 
         </div>
@@ -205,6 +209,7 @@
         </div>
     </div>
     <script>
+        // begin buyTickets
         showBuyTickets = () => {
             modal.classList.add('open')
         }
@@ -223,7 +228,24 @@
         modalContainer.addEventListener('click', (event) => {
             event.stopPropagation();
         })
+        //responsive
+        let header = document.getElementById('header');
+        const mobileMenu = document.querySelector('.mobile-menu-btn')
+        let headerHeight = header.clientHeight;
+        // OPEN/CLOSE MOBILE MENU
+        mobileMenu.onclick = () => {
+            let isClosed = header.clientHeight === headerHeight;
+            isClosed === true ? header.style.height = 'auto' : header.style.height = null;
 
+        }
+        //CLOSE AUTO WHEN CLICK MENU
+        let menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        for (let i = 0; i < menuItems.length; i++) {
+            let menuItem = menuItems[i];
+            menuItem.onclick = () => {
+                header.style.height = null;
+            }
+        }
     </script>
 </body>
 

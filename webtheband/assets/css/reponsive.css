@@ -1,0 +1,11 @@
+@media (max-width: 740px) {
+    #nav>li {
+        display: block;
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+}
+
+@media (max-width:1023px) and (min-width:740) {}
