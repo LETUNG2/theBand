@@ -464,6 +464,16 @@ header.modal-header {
 
 }
 
+.contact-info a {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+
+}
+
 .contact-info i::before {
     width: 30px;
     display: inline-block;

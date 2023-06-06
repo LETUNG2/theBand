@@ -49,7 +49,7 @@
     }
 
     .contact-form {
-        margin-top: 16px;
+        margin-top: 32px;
     }
 
     .form-control {
@@ -60,3 +60,39 @@
         text-align: center;
     }
 }
+
+/* table & mobile */
+@media (max-width: 1023px) {
+    .btn {
+        padding: 15px 16px;
+    }
+
+    .contact-form .form-control {
+        padding: 15px;
+    }
+
+
+    .socials-list {
+        font-size: 48px;
+    }
+
+    .socials-list a {
+        padding: 0 8px;
+
+    }
+
+    #footer .copyright {
+        padding: 12px 0;
+        display: inline block;
+    }
+
+    #nav .subnav a {
+        padding: 5px 12px;
+    }
+
+    .contact-info {
+        line-height: 2;
+    }
+}
+
+@media (max-width: 1023px) and (min-width:740px) {}
