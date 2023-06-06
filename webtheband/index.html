@@ -132,8 +132,8 @@
                 <div class="row contact-content">
                     <div class="col col-half contact-info">
                         <p><i class="ti-location-pin">HaNoi, VN</i></p>
-                        <p><i class="ti-mobile">Phone: +00368179</i></p>
-                        <p><i class="ti-email">Email: letung257@gmail.com</i></p>
+                        <p><i class="ti-mobile">Phone: +84 3681794**</i></p>
+                        <p><i class="ti-email">Email: letung257****@gmail.com</i></p>
 
                     </div>
                     <div class="col col-half contact-form">
@@ -242,8 +242,14 @@
         let menuItems = document.querySelectorAll('#nav li a[href*="#"]')
         for (let i = 0; i < menuItems.length; i++) {
             let menuItem = menuItems[i];
-            menuItem.onclick = () => {
-                header.style.height = null;
+
+            menuItem.onclick = (event) => {
+                let isParenMenu = menuItem.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav');
+                if (!isParenMenu) {
+                    header.style.height = null;
+                } else {
+                    event.preventDefault();
+                }
             }
         }
     </script>

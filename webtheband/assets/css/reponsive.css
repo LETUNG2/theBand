@@ -1,4 +1,15 @@
 @media (max-width: 740px) {
+    #header {
+        overflow: hidden;
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+
+    #header .mobile-menu-btn {
+        display: block;
+    }
 
     #nav {
         display: block;
@@ -12,13 +23,21 @@
         display: inline-block;
     }
 
-    #header .search-btn {
-        display: none;
+    #nav li a {
+        padding: 1px 24px;
     }
 
-    #header .mobile-menu-btn {
-        display: block;
+    #nav .subnav {
+        position: initial;
+        background: #333;
+
     }
+
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 42px;
+    }
+
 }
 
 @media (max-width:1023px) and (min-width:740) {}
